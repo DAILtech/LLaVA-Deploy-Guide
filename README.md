@@ -76,7 +76,8 @@ The CLI allows you to chat with the model via the terminal. Use the `run_cli.py`
 ```bash
 python scripts/run_cli.py --model llava-1.5-7b --image path/to/your_image.jpg
  ```
-By default, if you do not provide a --question argument, the script will launch an interactive session. You will be prompted to enter a question after the image is loaded. For example: $ python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg Loaded model llava-1.5-7b (4-bit quantized). Image 'examples/images/demo1.jpg' loaded. You can now ask questions about the image. Question: What is the animal in this image? Answer: This image shows a cat. Question: what is it doing? Answer: It is resting. Question: exit In the above session, the user asked an English question and a Chinese question about the same image, and the model answered accordingly. Type exit (or press Ctrl+C) to quit the interactive mode. You can also specify a one-time question via the --question argument for a single-turn inference:
+By default, if you do not provide a `--question` argument, the script will launch an interactive session. You will be prompted to enter a question after the image is loaded. For example: $ python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg Loaded model llava-1.5-7b (4-bit quantized). Image 'examples/images/demo1.jpg' loaded. You can now ask questions about the image. Question: **What is the animal in this image?** Answer: This image shows a cat. Question: **what is it doing?** Answer: It is resting. Question: **exit** 
+In the above session, the user asked an English question and a Chinese question about the same image, and the model answered accordingly. Type `exit` (or press `Ctrl+C`) to quit the interactive mode. You can also specify a one-time question via the `--question` argument for a single-turn inference:
 
 ```bash
 python scripts/run_cli.py --model llava-1.5-7b \\
