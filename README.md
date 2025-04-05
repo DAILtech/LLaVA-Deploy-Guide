@@ -29,6 +29,7 @@ You can set up the project either using **Conda** (with the provided `environmen
     cd LLaVA-Deploy-Guide
     ```
 2. **Conda Environment (Recommended):**
+   
    Create a Conda environment with the necessary packages.
     ```bash
     conda env create -f environment.yml  
@@ -36,6 +37,7 @@ You can set up the project either using **Conda** (with the provided `environmen
     ```
    This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies.
 4. **(Alternative) Pip Environment:**
+   
    Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
     ```bash
     python3 -m venv venv                  # optional: create virtual environment  
@@ -45,8 +47,10 @@ You can set up the project either using **Conda** (with the provided `environmen
      ```
    *Note:* For GPU support, make sure to install the correct PyTorch wheel with CUDA (for example, `torch==2.0.1+cu118`). See [PyTorch documentation](https://pytorch.org/get-started/locally/) for more details if the default `torch` installation does not use GPU.
 6. **Download Model Weights:** (See next section for details.)
+   
    You will need to download LLaVA model weights separately, as they are not included in this repo.
 8. **Verify Installation:**
+   
    After installing dependencies and downloading a model, you can run a quick test:
     ```bash
     python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "What is in this image?"
