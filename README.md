@@ -25,7 +25,7 @@ You can set up the project either using **Conda** (with the provided `environmen
 - *Optional:* Run `bash scripts/setup_env.sh` to automatically install system requirements (NVIDIA driver, CUDA, Miniconda, git-lfs). This script is intended for Ubuntu and requires sudo for driver installation. You can also perform these steps manually as described in Environment Requirements.
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/YourUsername/LLaVA-Deploy-Tutorial.git  
+    git clone https://github.com/YourUsername/LLaVA-Deploy-Guide.git  
     cd LLaVA-Deploy-Tutorial
     ```
 2. **Conda Environment (Recommended):**
