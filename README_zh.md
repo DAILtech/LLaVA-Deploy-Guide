@@ -1,7 +1,7 @@
 # LLaVA-Deploy-Guide 中文版
 
 ## 项目简介
-LLaVA-Deploy-Guide 是一个开源教程项目，旨在指导新手开发者部署 **LLaVA (Large Language and Vision Assistant)** 多模态大模型。通过本教程，您可以学习如何配置环境、下载 LLaVA 模型权重，并通过命令行界面或 Web 界面运行模型，实现对图像提问并获取回答的功能。支持 LLaVA 1.5 和 1.6 版本（7B 和 13B 模型），帮助您快速上手图像问答和多模态对话应用。
+LLaVA-Deploy-Guide 是一个开源教程项目，旨在指导新手开发者部署 **LLaVA (Large Language and Vision Assistant)** 多模态大模型。通过本教程，您可以学习如何配置环境、下载 LLaVA 模型权重，并通过命令行界面或 Web 界面运行模型，实现对图像提问并获取回答的功能。支持 LLaVA 1.5 和 1.6 版本（7B 和 13B 模型），帮助您快速上手图像问答和多模态对话应用。如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非常感谢！🤗
 
 ## 功能
 - **简单部署：** 使用 Conda 或 pip 快速安装，附带辅助脚本自动准备环境（NVIDIA 驱动、CUDA 工具包等）。
