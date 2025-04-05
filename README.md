@@ -4,6 +4,7 @@
 
 ## Introduction 
 LLaVA-Deploy-Guide is an open-source project that provides a step-by-step tutorial for deploying the **LLaVA (Large Language and Vision Assistant)** multi-modal model. This project demonstrates how to set up the environment, download pre-trained LLaVA model weights, and run inference through both a command-line interface (CLI) and a web-based UI. By following this guide, users can quickly get started with LLaVA 1.5 and 1.6 models (7B and 13B variants) for image-question answering and multi-modal chatbot applications.  
+_If you find this project helpful, please consider giving us a Star ⭐️. Your support means a lot to our team._
 
 ## Features
 - **Easy Setup:** Streamlined installation with Conda or pip, and helper scripts to automatically prepare environment (NVIDIA drivers, CUDA Toolkit, etc.).
