@@ -26,7 +26,7 @@ You can set up the project either using **Conda** (with the provided `environmen
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/YourUsername/LLaVA-Deploy-Guide.git  
-    cd LLaVA-Deploy-Tutorial
+    cd LLaVA-Deploy-Guide
     ```
 2. **Conda Environment (Recommended):**
    Create a Conda environment with the necessary packages.
