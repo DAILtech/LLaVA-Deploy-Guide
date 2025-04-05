@@ -1,0 +1,6 @@
+# Ignore model weights and large files
+models/
+*.ckpt
+*.pt
+*.bin
+*.safetensors
