@@ -95,10 +95,10 @@ The web UI provides an easy-to-use interface for uploading images and asking que
 python scripts/run_webui.py --model llava-1.5-7b
 ```
 This will start a local web server and display a Gradio interface. By default, the server runs on `http://localhost:7860`. You should see a web page that allows you to upload an image and enter a question. Click "Submit" to get the model's answer.
--The Gradio UI supports both English and Chinese inputs. It also includes a few example image+question pairs (loaded from the examples/ directory) that you can try with one click.
--The model is loaded with 4-bit quantization in the backend, just like in CLI mode. The first time you ask a question, there might be a delay as the model initializes on the GPU. Subsequent questions on the same image will be faster.
--You can ask multiple questions about the same image. To switch to a different image, upload a new image file.
--To stop the web server, press Ctrl+C in the terminal where it's running.
+- The Gradio UI supports both English and Chinese inputs. It also includes a few example image+question pairs (loaded from the examples/ directory) that you can try with one click.
+- The model is loaded with 4-bit quantization in the backend, just like in CLI mode. The first time you ask a question, there might be a delay as the model initializes on the GPU. Subsequent questions on the same image will be faster.
+- You can ask multiple questions about the same image. To switch to a different image, upload a new image file.
+- To stop the web server, press Ctrl+C in the terminal where it's running.
 
 ## License
 This project is released under the MIT License. Note that the LLaVA model weights are subject to their own licenses (e.g., LLaMA and Vicuna licenses) – please review and comply with those when using the models.
