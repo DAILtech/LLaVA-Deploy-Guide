@@ -1,0 +1,12 @@
+[
+  {
+    "image": "images/demo1.jpg",
+    "question_en": "What is in this image?",
+    "question_zh": "这张图片中有什么？"
+  },
+  {
+    "image": "images/demo2.png",
+    "question_en": "Describe the scene in the image.",
+    "question_zh": "请描述图片中的场景。"
+  }
+]
