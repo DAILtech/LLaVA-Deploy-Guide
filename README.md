@@ -28,21 +28,29 @@ You can set up the project either using **Conda** (with the provided `environmen
     git clone https://github.com/YourUsername/LLaVA-Deploy-Tutorial.git  
     cd LLaVA-Deploy-Tutorial
     ```
-2. **Conda Environment (Recommended):** Create a Conda environment with the necessary packages.
+2. **Conda Environment (Recommended):**
+   Create a Conda environment with the necessary packages.
     ```bash
     conda env create -f environment.yml  
     conda activate llava_deploy
     ```
    This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies.
-4. **(Alternative) Pip Environment:** Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).  
+4. **(Alternative) Pip Environment:**
+   Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
+    ```bash
     python3 -m venv venv                  # optional: create virtual environment  
     source venv/bin/activate             # activate the virtual environment  
     pip install -U pip                   # upgrade pip  
     pip install -r requirements.txt
+     ```
    *Note:* For GPU support, make sure to install the correct PyTorch wheel with CUDA (for example, `torch==2.0.1+cu118`). See [PyTorch documentation](https://pytorch.org/get-started/locally/) for more details if the default `torch` installation does not use GPU.
-5. **Download Model Weights:** (See next section for details.) You will need to download LLaVA model weights separately, as they are not included in this repo.
-6. **Verify Installation:** After installing dependencies and downloading a model, you can run a quick test:  
+6. **Download Model Weights:** (See next section for details.)
+   You will need to download LLaVA model weights separately, as they are not included in this repo.
+8. **Verify Installation:**
+   After installing dependencies and downloading a model, you can run a quick test:
+    ```bash
     python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "What is in this image?"
+     ```
    If everything is set up correctly, the model will load and output an answer about the demo image.
 
 ## Model Download 
