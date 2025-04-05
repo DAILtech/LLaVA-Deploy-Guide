@@ -57,11 +57,11 @@ You can set up the project either using **Conda** (with the provided `environmen
 The LLaVA model weights are not distributed with this repository due to their size. Use the provided script to download the desired version of LLaVA:
 - **Available Models:** LLaVA-1.5 (7B and 13B) and LLaVA-1.6 (7B and 13B) with Vicuna backend. Ensure you have sufficient VRAM for the model you choose (see Environment Requirements).
 - **Download Script:** Run `scripts/download_model.sh` with the model name. For example:  
-    # Download LLaVA 1.5 7B model  
-    bash scripts/download_model.sh llava-1.5-7b  
+    ### Download LLaVA 1.5 7B model  
+     `bash scripts/download_model.sh llava-1.5-7b`  
   This will create a directory under `models/` (which is git-ignored) and download all necessary weight files there (it may be several GBs). If you have Git LFS installed, the script uses `git clone` from Hugging Face Hub.
 - **Using Hugging Face Mirror:** If you are in a region with slow access to huggingface.co, you can use the `--hf-mirror` flag to download from the [hf-mirror](https://hf-mirror.com) site. For example:  
-    bash scripts/download_model.sh llava-1.5-13b --hf-mirror  
+     `bash scripts/download_model.sh llava-1.5-13b --hf-mirror`
   The script will replace the download URLs to use the mirror. Alternatively, you can set the environment variable `HF_ENDPOINT=https://hf-mirror.com` before running the script for the same effect.
 - **Hugging Face Access:** The LLaVA weights are hosted on Hugging Face and may require you to accept the model license (since they are based on LLaMA/Vicuna). If the download script fails due to permission, make sure:
   1. You have a Hugging Face account and have accepted the usage terms for the LLaVA model repositories.
@@ -75,5 +75,28 @@ Once the environment is set up and model weights are downloaded, you can run LLa
 The CLI allows you to chat with the model via the terminal. Use the `run_cli.py` script:
 ```bash
 python scripts/run_cli.py --model llava-1.5-7b --image path/to/your_image.jpg
+ ```
+By default, if you do not provide a --question argument, the script will launch an interactive session. You will be prompted to enter a question after the image is loaded. For example: $ python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg Loaded model llava-1.5-7b (4-bit quantized). Image 'examples/images/demo1.jpg' loaded. You can now ask questions about the image. Question: What is the animal in this image? Answer: This image shows a cat. Question: what is it doing? Answer: It is resting. Question: exit In the above session, the user asked an English question and a Chinese question about the same image, and the model answered accordingly. Type exit (or press Ctrl+C) to quit the interactive mode. You can also specify a one-time question via the --question argument for a single-turn inference:
 
-### 
+```bash
+python scripts/run_cli.py --model llava-1.5-7b \\
+       --image examples/images/demo2.png \\
+       --question "Describe the scene in this image."
+```
+(The --model parameter accepts either a model name like "llava-1.5-7b" or a path to a local model directory. The script automatically enables 4-bit quantization for efficiency.)
+### Web UI (Gradio)
+The web UI provides an easy-to-use interface for uploading images and asking questions. Launch it by running:
+```bash
+python scripts/run_webui.py --model llava-1.5-7b
+```
+This will start a local web server and display a Gradio interface. By default, the server runs on `http://localhost:7860`. You should see a web page that allows you to upload an image and enter a question. Click "Submit" to get the model's answer.
+-The Gradio UI supports both English and Chinese inputs. It also includes a few example image+question pairs (loaded from the examples/ directory) that you can try with one click.
+-The model is loaded with 4-bit quantization in the backend, just like in CLI mode. The first time you ask a question, there might be a delay as the model initializes on the GPU. Subsequent questions on the same image will be faster.
+-You can ask multiple questions about the same image. To switch to a different image, upload a new image file.
+-To stop the web server, press Ctrl+C in the terminal where it's running.
+
+## License
+This project is released under the MIT License. Note that the LLaVA model weights are subject to their own licenses (e.g., LLaMA and Vicuna licenses) – please review and comply with those when using the models.
+
+## Documentation and Support 
+For detailed performance information and hardware recommendations, see the performance guide. If you encounter issues with this tutorial, please feel free to open an issue on GitHub or reach out to the maintainers. We welcome contributions to improve this project.
