@@ -28,16 +28,14 @@ You can set up the project either using **Conda** (with the provided `environmen
     git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
     cd LLaVA-Deploy-Guide
     ```
-2. **Conda Environment (Recommended):**
-   
+2. **Conda Environment (Recommended):**  
    Create a Conda environment with the necessary packages.
     ```bash
     conda env create -f environment.yml  
     conda activate llava_deploy
     ```
    This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies.
-4. **(Alternative) Pip Environment:**
-   
+3. **(Alternative) Pip Environment:**  
    Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
     ```bash
     python3 -m venv venv                  # optional: create virtual environment  
@@ -46,18 +44,16 @@ You can set up the project either using **Conda** (with the provided `environmen
     pip install -r requirements.txt
      ```
    *Note:* For GPU support, make sure to install the correct PyTorch wheel with CUDA (for example, `torch==2.0.1+cu118`). See [PyTorch documentation](https://pytorch.org/get-started/locally/) for more details if the default `torch` installation does not use GPU.
-6. **Download Model Weights:** (See next section for details.)
-   
+4. **Download Model Weights:** (See next section for details.)   
    You will need to download LLaVA model weights separately, as they are not included in this repo.
-8. **Verify Installation:**
-   
+5. **Verify Installation:**  
    After installing dependencies and downloading a model, you can run a quick test:
     ```bash
     python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "What is in this image?"
      ```
    If everything is set up correctly, the model will load and output an answer about the demo image.
 
-## Model Download 
+## Model Download  
 The LLaVA model weights are not distributed with this repository due to their size. Use the provided script to download the desired version of LLaVA:
 - **Available Models:** LLaVA-1.5 (7B and 13B) and LLaVA-1.6 (7B and 13B) with Vicuna backend. Ensure you have sufficient VRAM for the model you choose (see Environment Requirements).
 - **Download Script:** Run `scripts/download_model.sh` with the model name. For example:  
