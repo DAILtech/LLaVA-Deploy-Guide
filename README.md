@@ -35,7 +35,7 @@ You can set up the project either using **Conda** (with the provided `environmen
     conda env create -f environment.yml  
     conda activate llava_deploy
     ```
-   This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies.
+   This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies. Replaced by `environment_zh.yml` in China.
 3. **(Alternative) Pip Environment:**  
    Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
     ```bash
