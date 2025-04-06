@@ -38,6 +38,7 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
     conda activate llava_deploy
    ```
    该步骤将安装 Python、PyTorch 2.x（CUDA 11.8）、Transformers、Gradio 等所需库。
+   如果在中国，加载速度过慢，可将`environment.tml`替换为`environment_zh.tml`，使用国内镜像源下载环境配置文件。  
    运行结果示例：
 
 6. **或使用 pip 安装：**
