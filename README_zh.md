@@ -67,16 +67,16 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
 - **可选模型：**
    LLaVA-1.5 和 LLaVA-1.6 的 7B/13B 权重。请选择与您GPU显存相匹配的模型版本。  
 1.  **LFS安装**：确保已安装Git LFS，安装指令：
-```bash
-sudo apt-get update
-sudo apt-get install git-lfs
-```  
-安装后初始化Git LFS：  
-```bash
-git lfs install
-```  
-运行结果示例：  
-![image](https://github.com/user-attachments/assets/33243f7c-adb4-4dde-b631-a640e1269ad2)  
+   ```bash
+   sudo apt-get update
+   sudo apt-get install git-lfs
+   ```  
+   安装后初始化Git LFS：  
+   ```bash
+   git lfs install
+   ```  
+   运行结果示例：  
+   ![image](https://github.com/user-attachments/assets/33243f7c-adb4-4dde-b631-a640e1269ad2)  
 
 2.  **使用下载脚本：**   
 运行 `scripts/download_model.sh` 并指定模型版本名称。  
