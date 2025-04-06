@@ -30,7 +30,7 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
    运行结果示例：
    ![image](https://github.com/user-attachments/assets/564839e1-9708-473c-bd99-f424e4cf4273)
 
-3. **Conda 创建环境（推荐）：**
+2. **Conda 创建环境（推荐）：**
   
    使用 Conda 根据 `environment.yml` 创建环境并安装依赖：
    ```bash
@@ -40,8 +40,9 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
    该步骤将安装 Python、PyTorch 2.x（CUDA 11.8）、Transformers、Gradio 等所需库。
    如果在中国，加载速度过慢，可将`environment.tml`替换为`environment_zh.tml`，使用国内镜像源下载环境配置文件。  
    运行结果示例：
+   ![image](https://github.com/user-attachments/assets/258a57ae-9439-4121-888b-d6009440155a)
 
-6. **或使用 pip 安装：**
+3. **或使用 pip 安装：**
 
    确保系统已有 Python 3.8+，可选择使用虚拟环境，然后通过 pip 安装：
    ```bash
@@ -51,10 +52,11 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
     pip install -r requirements.txt
    ```
    *注意：* 如果需要 GPU 加速，请安装匹配 CUDA 版本的 PyTorch （例如通过 `pip install torch==2.0.1+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html`）。默认直接使用 `pip install torch` 可能安装无 CUDA 支持的版本，请根据 PyTorch 官方指南选择正确版本。
-8. **下载模型：**
+   
+4. **下载模型：**
 
    模型权重需另行下载（见下文“模型下载”部分）。您可以运行脚本获取所需模型。
-11. **测试验证：**
+5. **测试验证：**
 
     安装完依赖并下载模型后，运行示例命令测试是否成功：
     `python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "这张图片中有什么？"`
