@@ -79,7 +79,7 @@ This will create a directory under `models/` (which is git-ignored) and download
  ```bash
  bash scripts/download_model.sh llava-1.5-7b --hf-mirror
  ```
-      The script will replace the download URLs to use the mirror. Alternatively, you can set the environment variable `HF_ENDPOINT=https://hf-mirror.com` before running the script for the same effect.
+The script will replace the download URLs to use the mirror. Alternatively, you can set the environment variable `HF_ENDPOINT=https://hf-mirror.com` before running the script for the same effect.
 4. **Hugging Face Access:** The LLaVA weights are hosted on Hugging Face and may require you to accept the model license (since they are based on LLaMA/Vicuna). If the download script fails due to permission,     make sure:
       1. You have a Hugging Face account and have accepted the usage terms for the LLaVA model repositories.
       2. You have run `huggingface-cli login` (if using Hugging Face CLI) or set `HUGGINGFACE_HUB_TOKEN` environment variable with your token.
