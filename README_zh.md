@@ -24,8 +24,8 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
 
    执行以下命令获取代码：
    ```bash
-    git clone https://github.com/DAILtech/LLaVA-Deploy-Tutorial.git  
-    cd LLaVA-Deploy-Tutorial
+    git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
+    cd LLaVA-Deploy-Guide
    ```
 3. **Conda 创建环境（推荐）：**
   
