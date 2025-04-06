@@ -78,16 +78,22 @@ sudo apt-get install git-lfs
 2.  **使用下载脚本：**   
 运行 `scripts/download_model.sh` 并指定模型版本名称。  
 例如下载 LLaVA-1.5-7B 模型：  
-    ```bash scripts/download_model.sh llava-1.5-7b```  
+    ```bash
+    bash scripts/download_model.sh llava-1.5-7b
+    ```  
   运行后将在 `models/` 目录下创建对应子文件夹，并下载模型文件到其中（`models/` 已添加到 .gitignore）。脚本将通过 `git clone` 从 Hugging Face 获取权重。  
 3. **镜像加速：**  
 如果在国内直接下载速度缓慢，可以添加参数 `--hf-mirror` 使用 Hugging Face 国内镜像源：  
-    ```bash scripts/download_model.sh llava-1.5-7b --hf-mirror```
+    ```bash
+    bash scripts/download_model.sh llava-1.5-7b --hf-mirror
+    ```
   脚本将使用 hf-mirror 加速下载。或手动设置环境变量 `HF_ENDPOINT=https://hf-mirror.com` 后再运行脚本。  
-4. **权限提示：** 如果脚本提示没有权限下载，请确认在 Hugging Face 对应模型页面接受了使用协议，并确保已登录 Hugging Face（例如运行过 `huggingface-cli login`）。必要时，可在脚本中配置 Hugging Face Token 或手动下载模型后放置到 `models/`目录。  
-5. **手动下载：** 您也可以从 Hugging Face 网站手动下载所有模型文件，然后将它们置于 `models/<模型名称>/` 文件夹下（例如 `models/llava-1.5-7b/`）。下载时建议使用支持断点续传的工具加速。
+4. **权限提示：**   
+如果脚本提示没有权限下载，请确认在 Hugging Face 对应模型页面接受了使用协议，并确保已登录 Hugging Face（例如运行过 `huggingface-cli login`）。必要时，可在脚本中配置 Hugging Face Token 或手动下载模型后放置到 `models/`目录。  
+5. **手动下载：**   
+您也可以从 Hugging Face 网站手动下载所有模型文件，然后将它们置于 `models/<模型名称>/` 文件夹下（例如 `models/llava-1.5-7b/`）。下载时建议使用支持断点续传的工具加速。
 
-## 使用方法
+## 使用方法  
 模型准备就绪后，您可以通过命令行或 Web 界面两种方式与模型交互：
 
 ### 命令行交互
