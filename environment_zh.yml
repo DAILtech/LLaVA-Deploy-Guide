@@ -7,12 +7,13 @@ channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
 dependencies:
   - python=3.9
-  - pytorch=2.0.*
-  - torchvision=0.15.*
+  - pytorch=2.0.1
+  - torchvision=0.15.2
   - cudatoolkit=11.8
   - pip
   - pip:
       - --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+      - torchaudio==2.0.2
       - transformers>=4.33
       - accelerate>=0.20
       - bitsandbytes>=0.39.0
