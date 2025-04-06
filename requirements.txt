@@ -1,5 +1,6 @@
-torch>=2.0.0
-torchvision>=0.15.0
+torch==2.0.1
+torchvision==0.15.2
+torchaudio==2.0.2
 transformers>=4.33.0
 accelerate>=0.20.0
 bitsandbytes>=0.39.0
