@@ -59,7 +59,7 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
 5. **测试验证：**
 
     安装完依赖并下载模型后，运行示例命令测试是否成功：
-    `python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "这张图片中有什么？"`
+    `python -m scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "这张图片中有什么？"`
    若一切配置正确，模型将加载并对示例图片给出合理的描述答案。
 
 ## 模型下载
@@ -84,6 +84,8 @@ git lfs install
     bash scripts/download_model.sh llava-1.5-7b    
 ```   
   运行后将在 `models/` 目录下创建对应子文件夹，并下载模型文件到其中（`models/` 已添加到 .gitignore）。脚本将通过 `git clone` 从 Hugging Face 获取权重。  
+  运行结果示例：
+  ![image](https://github.com/user-attachments/assets/f193ed59-6a72-42bf-9fea-5a8760cae16b)  
 3. **镜像加速：**  
 如果在国内直接下载速度缓慢，可以添加参数 `--hf-mirror` 使用 Hugging Face 国内镜像源：   
 ```bash
