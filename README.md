@@ -68,7 +68,7 @@ Then initial Git LFS:
 ```bash
 git lfs install
 ```
-Output:
+Output:  
 2. **Download models:**
 ```bash
 bash scripts/download_model.sh llava-1.5-7b
