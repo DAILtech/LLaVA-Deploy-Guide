@@ -27,6 +27,8 @@ _如果觉得本项目有帮助，请点点⭐️支持一下，我们团队非�
     git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
     cd LLaVA-Deploy-Guide
    ```
+   ![image](https://github.com/user-attachments/assets/564839e1-9708-473c-bd99-f424e4cf4273)
+
 3. **Conda 创建环境（推荐）：**
   
    使用 Conda 根据 `environment.yml` 创建环境并安装依赖：
