@@ -40,15 +40,16 @@ You can set up the project either using **Conda** (with the provided `environmen
 4. **Conda Environment (Recommended):**  
    Create a Conda environment with the necessary packages.
     ```bash
-    git clone https://github.com/haotian-liu/LLaVA.git
-    cd LLaVA
+    conda create -n llava python=3.10 -y
+    # reset terminal
+    source ~/.bashrc
+    # activate llava
+    conda activate llava
     ```
-   This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies. Replaced by `environment_zh.yml` in China.
+   This will install Python, PyTorch 3.x (with CUDA 12.1 support), Hugging Face Transformers, Gradio, and other dependencies. Replaced by `environment_zh.yml` in China.
 5. **(Alternative) Pip Environment:**  
    Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
     ```bash
-    python3 -m venv venv                  # optional: create virtual environment  
-    source venv/bin/activate             # activate the virtual environment  
     pip install -U pip                   # upgrade pip  
     pip install -r requirements.txt
      ```
