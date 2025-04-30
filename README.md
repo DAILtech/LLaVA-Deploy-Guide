@@ -24,20 +24,27 @@ _If you find this project helpful, please consider giving us a Star ⭐️. Your
 ## Installation
 You can set up the project either using **Conda** (with the provided `environment.yml`) or using **pip** with `requirements.txt`. Before installation, optionally run the automated environment setup script to ensure system dependencies are in place:
 - *Optional:* Run `bash scripts/setup_env.sh` to automatically install system requirements (NVIDIA driver, CUDA, Miniconda, git-lfs). This script is intended for Ubuntu and requires sudo for driver installation. You can also perform these steps manually as described in Environment Requirements.
-1. **Clone the repository （guide file from LLaVA-Deploy-Guide and LLaVA file from HaotianLiu）:**
+1. **Clone the repository :**
     ```bash
     git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
     cd LLaVA-Deploy-Guide
     ```
+
+2. **clone the LLaVA moedel repository**
+   put LLaVA in /LLaVA-Deploy-Guide folder
+    ```bash
+    git clone https://github.com/haotian-liu/LLaVA.git
+    cd LLaVA
+    ```
     
-3. **Conda Environment (Recommended):**  
+4. **Conda Environment (Recommended):**  
    Create a Conda environment with the necessary packages.
     ```bash
     git clone https://github.com/haotian-liu/LLaVA.git
     cd LLaVA
     ```
    This will install Python, PyTorch 2.x (with CUDA 11.8 support), Hugging Face Transformers, Gradio, and other dependencies. Replaced by `environment_zh.yml` in China.
-4. **(Alternative) Pip Environment:**  
+5. **(Alternative) Pip Environment:**  
    Ensure you have Python 3.8+ installed, then install packages via pip (preferably in a virtual environment).
     ```bash
     python3 -m venv venv                  # optional: create virtual environment  
@@ -46,9 +53,9 @@ You can set up the project either using **Conda** (with the provided `environmen
     pip install -r requirements.txt
      ```
    *Note:* For GPU support, make sure to install the correct PyTorch wheel with CUDA (for example, `torch==2.0.1+cu118`). See [PyTorch documentation](https://pytorch.org/get-started/locally/) for more details if the default `torch` installation does not use GPU.
-5. **Download Model Weights:** (See next section for details.)   
+6. **Download Model Weights:** (See next section for details.)   
    You will need to download LLaVA model weights separately, as they are not included in this repo.
-6. **Verify Installation:**  
+7. **Verify Installation:**  
    After installing dependencies and downloading a model, you can run a quick test:
     ```bash
     python scripts/run_cli.py --model llava-1.5-7b --image examples/images/demo1.jpg --question "What is in this image?"
