@@ -29,12 +29,6 @@ You can set up the project either using **Conda** (with the provided `environmen
     git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
     cd LLaVA-Deploy-Guide
     ```
-
-   ```bash
-    git clone https://github.com/DAILtech/LLaVA-Deploy-Guide.git  
-    cd LLaVA-Deploy-Guide
-    ```
-
     
 3. **Conda Environment (Recommended):**  
    Create a Conda environment with the necessary packages.
